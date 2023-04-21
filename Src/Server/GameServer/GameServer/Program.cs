@@ -14,6 +14,7 @@ namespace GameServer
     {
         static void Main(string[] args)
         {
+            //日志
             FileInfo fi = new System.IO.FileInfo("log4net.xml");
             log4net.Config.XmlConfigurator.ConfigureAndWatch(fi);
             Log.Init("GameServer");

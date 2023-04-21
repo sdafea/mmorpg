@@ -69,6 +69,7 @@ namespace Network
         /// <param name="count"></param>
         public void ReceiveData(byte[] data,int offset,int count)
         {
+            //判断容量是否够用
             if(stream.Position + count > stream.Capacity)
             {
                 throw new Exception("PackageHandler write buffer overflow");
@@ -114,7 +115,7 @@ namespace Network
         }
 
         /// <summary>
-        /// 数据包解析
+        /// 数据包解析,处理分包粘包
         /// </summary>
         /// <returns></returns>
         bool ParsePackage()

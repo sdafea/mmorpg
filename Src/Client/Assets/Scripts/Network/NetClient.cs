@@ -227,6 +227,7 @@ namespace Network
                 return;
             }
 
+            //如果没连接就进行重连
             if (!this.Connected)
             {
                 this.receiveBuffer.Position = 0;
@@ -237,6 +238,7 @@ namespace Network
                 return;
             }
 
+            //发送队列
             sendQueue.Enqueue(message);
         
             if (this.lastSendTime == 0)
@@ -245,6 +247,7 @@ namespace Network
             }
         }
 
+        //真正的连接方法
         void DoConnect()
         {
             Debug.Log("NetClient.DoConnect on " + this.address.ToString());
@@ -260,6 +263,7 @@ namespace Network
                 this.clientSocket.Blocking = true;
 
                 Debug.Log(string.Format("Connect[{0}] to server {1}", this.retryTimes, this.address) + "\n");
+                //异步
                 IAsyncResult result = this.clientSocket.BeginConnect(this.address, null, null);
                 bool success = result.AsyncWaitHandle.WaitOne(NetConnectTimeout);
                 if (success)
@@ -267,6 +271,8 @@ namespace Network
                     this.clientSocket.EndConnect(result);
                 }
             }
+
+            //捕获网络异常
             catch(SocketException ex)
             {
                 if(ex.SocketErrorCode == SocketError.ConnectionRefused)
@@ -275,6 +281,7 @@ namespace Network
                 }
                 Debug.LogErrorFormat("DoConnect SocketException:[{0},{1},{2}]{3} ", ex.ErrorCode,ex.SocketErrorCode,ex.NativeErrorCode, ex.ToString()); 
             }
+            //捕获常规异常
             catch (Exception e)
             {
                 Debug.Log("DoConnect Exception:" + e.ToString() + "\n");
@@ -418,6 +425,7 @@ namespace Network
 
         void ProceeMessage()
         {
+            //分发器
             MessageDistributer.Instance.Distribute();
         }
 
@@ -429,10 +437,13 @@ namespace Network
                 return;
             }
 
+            //保证短线重连
             if (this.KeepConnect())
             {
+                //先接收
                 if (this.ProcessRecv())
                 {
+                    //判断连接
                     if (this.Connected)
                     {
                         this.ProcessSend();

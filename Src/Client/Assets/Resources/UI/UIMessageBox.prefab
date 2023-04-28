@@ -296,6 +296,9 @@ MonoBehaviour:
   - {fileID: 114074642495481368}
   buttonYes: {fileID: 114149779274491158}
   buttonNo: {fileID: 114926987955455140}
+  buttonClose: {fileID: 0}
+  buttonYesTitle: {fileID: 0}
+  buttonNoTitle: {fileID: 0}
 --- !u!114 &114149779274491158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -476,7 +479,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1334, y: 750}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -1064,8 +1067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: 11.5}
-  m_SizeDelta: {x: -168.9, y: -203}
+  m_AnchoredPosition: {x: 28.6, y: 11.5}
+  m_SizeDelta: {x: -216.7, y: -203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224968469829049894
 RectTransform:

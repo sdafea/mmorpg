@@ -24,6 +24,34 @@ namespace GameServer.Services
 
         }
 
+        void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
+        {
+            Log.InfoFormat("UserLoginRequest: User:{0}  Pass:{1}", request.User, request.Passward);
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.userLogin = new UserLoginResponse();
+
+            TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
+
+            if (user == null)
+            {
+                message.Response.userLogin.Result = Result.Failed;
+                message.Response.userLogin.Errormsg = "用户不存在.";
+            }
+            else if (user.Password != request.Passward)
+            {
+                message.Response.userLogin.Result = Result.Failed;
+                message.Response.userLogin.Errormsg = "密码错误";
+            }
+            else
+            {
+                
+            }
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
+        }
+
         void OnRegister(NetConnection<NetSession> sender, UserRegisterRequest request)
         {
             Log.InfoFormat("UserRegisterRequest: User:{0}  Pass:{1}", request.User, request.Passward);
@@ -51,28 +79,5 @@ namespace GameServer.Services
             sender.SendData(data, 0, data.Length);
         }
 
-        void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
-        {
-            Log.InfoFormat("UserLoginRequest: User:{0}  Pass:{1}", request.User, request.Passward);
-
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-            message.Response.userLogin = new UserLoginResponse();
-
-            TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
-            if (user != null)
-            {
-                message.Response.userLogin.Result = Result.Failed;
-                message.Response.userLogin.Errormsg = "成功登入.";
-            }
-            else
-            {
-                message.Response.userLogin.Result = Result.Failed;
-                message.Response.userLogin.Errormsg = "用户不存在.";
-            }
-
-            byte[] data = PackageHandler.PackMessage(message);
-            sender.SendData(data, 0, data.Length);
-        }
     }
 }

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+
+using SkillBridge.Message;
+using ProtoBuf;
+using Services;
 
 public class LoadingManager : MonoBehaviour {
 
@@ -24,6 +29,10 @@ public class LoadingManager : MonoBehaviour {
         UILoading.SetActive(true);
         yield return new WaitForSeconds(1f);
         UITips.SetActive(false);
+
+        yield return DataManager.Instance.LoadData();
+
+        UserService.Instance.Init();
 
         for (float i = 0; i < 1;)
         {

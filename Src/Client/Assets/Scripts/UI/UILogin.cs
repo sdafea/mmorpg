@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SkillBridge.Message;
 
 public class UILogin : MonoBehaviour {
     public InputField username;
@@ -10,12 +11,7 @@ public class UILogin : MonoBehaviour {
 
     void Start()
     {
-        UserService.Instance.OnLogin = this.OnLogin;
-    }
-
-    void OnLogin(SkillBridge.Message.Result result, string msg)
-    {
-        MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
+        UserService.Instance.OnLogin = OnLogin;
     }
 
     // Update is called once per frame
@@ -23,7 +19,7 @@ public class UILogin : MonoBehaviour {
 		
 	}
 
-    public void OnClickRegister()
+    public void OnClickLogin()
     {
         if (string.IsNullOrEmpty(this.username.text))
         {
@@ -36,5 +32,15 @@ public class UILogin : MonoBehaviour {
             return;
         }
         UserService.Instance.SendLogin(this.username.text, this.password.text);
+    }
+
+    void OnLogin(Result result, string message)
+    {
+        if (result == Result.Success)
+        {
+            SceneManager.Instance.LoadScene("CharSelect");
+        }
+        else
+            MessageBox.Show(message, "错误", MessageBoxType.Error);
     }
 }

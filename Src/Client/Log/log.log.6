@@ -1,14 +1,24 @@
-2023-05-04 10:09:36,953 [ 1] INFO  Unity: LoadingManager start
-2023-05-04 10:09:44,544 [ 1] INFO  Unity: UserLoginRequest::user :A psw:123
-2023-05-04 10:09:44,545 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-05-04 10:09:44,546 [ 1] INFO  Unity: DoConnect
-2023-05-04 10:09:44,547 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-05-04 10:09:44,549 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-06-09 02:43:09,469 [ 1] INFO  Unity: LoadingManager start
+2023-06-09 02:43:12,846 [ 1] INFO  Unity: DataManager > DataManager()
+2023-06-09 02:43:17,545 [ 1] INFO  Unity: UserLoginRequest::user :A psw:123
+2023-06-09 02:43:17,547 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-06-09 02:43:17,549 [ 1] INFO  Unity: DoConnect
+2023-06-09 02:43:17,552 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-06-09 02:43:17,555 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-05-04 10:09:44,551 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-05-04 10:09:46,204 [ 1] INFO  Unity: OnUserLogin:Failed [≥…π¶µ«»Î.]
-2023-05-04 10:09:53,448 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-05-04 10:09:53,449 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-06-09 02:43:17,560 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-06-09 02:43:23,668 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-06-09 02:43:23,670 [ 1] INFO  Unity: Success
+2023-06-09 02:43:23,673 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at UILogin.OnLogin (Result result, System.String message) [0x00012] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\UI\UILogin.cs:41 
+  at Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) [0x0006d] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\Services\UserService.cs:134 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) [0x00044] in D:\demo\MmoProject\mmo\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-06-09 02:43:23,675 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UILogin.OnLogin (Result result, System.String message) (at Assets/Scripts/UI/UILogin.cs:41)
+Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) (at Assets/Scripts/Services/UserService.cs:134)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) (at D:/demo/MmoProject/mmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-06-09 02:43:38,779 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-06-09 02:43:38,781 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

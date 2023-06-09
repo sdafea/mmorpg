@@ -2,33 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Models;
+using Services;
+using SkillBridge.Message;
 public class UICharacterSelect : MonoBehaviour {
 
-    public GameObject PanelCreate;
-    public GameObject PanelSelect;
+    public GameObject panelCreate;
+    public GameObject panelSelect;
 
-    public Button CreateButton;
-    public Button SelectBtn1;
-    public Button SelectBtn2;
-    public Button SelectBtn3;
+    public Button returnBtn;
+    public Button createButton;
+    public Text title;
+    public Text descs;
 
-    public GameObject Chacter1;
-    public GameObject Chacter2;
-    public GameObject Chacter3;
-    // Use this for initialization
+
+    public UICharacterView characterView;
+    CharacterClass charClass;
+
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    public void Select1()
+
+    }
+
+    public void InitCharacterSelect()
     {
-        Chacter1.SetActive(true);
-        Chacter2.SetActive(false);
-        Chacter3.SetActive(false);
+        panelCreate.SetActive(false);
+        panelSelect.SetActive(true);
+
+    }
+        void Update () {
+		
+	}
+
+    public void InitCharacterCreate()
+    {
+        panelSelect.SetActive(false);
+        panelCreate.SetActive(true);
+
+    }
+
+    public void OnSelectClass(int charClass)
+    {
+        this.charClass = (CharacterClass)charClass;
+        characterView.CurrentCharacter = charClass - 1;
+        title.text= DataManager.Instance.Characters[charClass].Name;
+        descs.text= DataManager.Instance.Characters[charClass].Description;
+    }
+
+    public void ReturnBtn()
+    {
+        SceneManager.Instance.LoadScene("Loading");
     }
 }

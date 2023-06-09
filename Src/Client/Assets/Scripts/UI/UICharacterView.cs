@@ -4,13 +4,33 @@ using UnityEngine;
 
 public class UICharacterView : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject[] characters;
+
+    private int currentCharacter = 0;
+    
+    public int CurrentCharacter
+    {
+        get{
+            return currentCharacter;
+        }
+        set{
+            currentCharacter = value;
+            UpdateCharacter();
+        }
+    }
+    void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void UpdateCharacter()
+    {
+        for(int i=0;i<3;i++)
+        {
+            characters[i].SetActive(i == currentCharacter);
+        }
+    }
 }

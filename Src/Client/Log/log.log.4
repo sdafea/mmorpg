@@ -1,35 +1,27 @@
-2023-06-09 02:57:20,743 [ 1] INFO  Unity: LoadingManager start
-2023-06-09 02:57:24,120 [ 1] INFO  Unity: DataManager > DataManager()
-2023-06-09 02:57:31,181 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
-2023-06-09 02:57:31,184 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-06-09 02:57:31,186 [ 1] INFO  Unity: DoConnect
-2023-06-09 02:57:31,189 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-06-09 02:57:31,193 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-06-12 17:44:17,846 [ 1] INFO  Unity: LoadingManager start
+2023-06-12 17:44:21,551 [ 1] INFO  Unity: DataManager > DataManager()
+2023-06-12 17:44:25,380 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
+2023-06-12 17:44:25,382 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-06-12 17:44:25,384 [ 1] INFO  Unity: DoConnect
+2023-06-12 17:44:25,386 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-06-12 17:44:25,389 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-06-09 02:57:31,199 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-06-09 02:57:37,525 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-06-09 02:57:37,528 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at UILogin.OnLogin (Result result, System.String message) [0x00012] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\UI\UILogin.cs:41 
-  at Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) [0x00063] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\Services\UserService.cs:133 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) [0x00044] in D:\demo\MmoProject\mmo\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2023-06-09 02:57:37,531 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UILogin.OnLogin (Result result, System.String message) (at Assets/Scripts/UI/UILogin.cs:41)
-Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) (at Assets/Scripts/Services/UserService.cs:133)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) (at D:/demo/MmoProject/mmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+2023-06-12 17:44:25,394 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-06-12 17:44:30,925 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-06-12 17:44:30,929 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-06-12 17:44:31,186 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
+
+2023-06-12 17:44:31,202 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-06-12 17:44:31,209 [ 1] INFO  Unity: Select Char:[2]b[Archer]
+2023-06-12 17:44:31,213 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index, System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:633)
+UICharacterSelect.OnSelectCharacter (Int32 idx) (at Assets/Scripts/UI/UICharacterSelect.cs:116)
+UICharacterSelect.InitCharacterSelect (Boolean init) (at Assets/Scripts/UI/UICharacterSelect.cs:90)
+UICharacterSelect.Start () (at Assets/Scripts/UI/UICharacterSelect.cs:29)
 }</args></log4net.Error>
-2023-06-09 02:57:59,988 [ 1] INFO  Unity: UserLoginRequest::user :a psw:1
-2023-06-09 02:58:00,023 [ 1] INFO  Unity: OnLogin:Failed [√‹¬Î¥ÌŒÛ]
-2023-06-09 02:58:05,285 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
-2023-06-09 02:58:05,318 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-06-09 02:58:05,319 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at UILogin.OnLogin (Result result, System.String message) [0x00012] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\UI\UILogin.cs:41 
-  at Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) [0x00063] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\Services\UserService.cs:133 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) [0x00044] in D:\demo\MmoProject\mmo\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2023-06-09 02:58:05,320 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UILogin.OnLogin (Result result, System.String message) (at Assets/Scripts/UI/UILogin.cs:41)
-Services.UserService.OnUserLogin (System.Object sender, SkillBridge.Message.UserLoginResponse response) (at Assets/Scripts/Services/UserService.cs:133)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) (at D:/demo/MmoProject/mmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
-}</args></log4net.Error>
-2023-06-09 02:58:07,942 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-09 02:58:07,944 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-06-12 17:44:43,665 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-06-12 17:44:43,667 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

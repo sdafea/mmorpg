@@ -1,21 +1,6 @@
-2023-06-10 03:59:14,807 [ 1] INFO  Unity: LoadingManager start
-2023-06-10 03:59:19,708 [ 1] INFO  Unity: DataManager > DataManager()
-2023-06-10 03:59:24,283 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
-2023-06-10 03:59:24,293 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-06-10 03:59:24,295 [ 1] INFO  Unity: DoConnect
-2023-06-10 03:59:24,298 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-06-10 03:59:24,301 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-06-10 03:59:24,313 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-06-10 03:59:29,884 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-06-10 03:59:29,890 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-06-10 03:59:30,357 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
-
-2023-06-10 03:59:30,375 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-06-10 04:01:19,524 [ 1] INFO  Unity: UserCreateCharacterRequest::name :err class:Warrior
-2023-06-10 04:01:20,129 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
-2023-06-10 04:01:21,954 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-10 04:01:21,955 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-06-16 03:42:03,658 [ 1] INFO  Unity: LoadingManager start
+2023-06-16 03:42:04,274 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-06-16 03:42:04,276 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

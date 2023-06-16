@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Services;
+using SkillBridge.Message;
 
 public class UIRegister : MonoBehaviour {
 
@@ -10,16 +11,13 @@ public class UIRegister : MonoBehaviour {
     public InputField password;
     public InputField passwordConfirm;
     public Button buttonRegister;
-	
-	void Start () {
+
+    public GameObject uiLogin;
+
+    void Start () {
         UserService.Instance.OnRegister = this.OnRegister;
 	}
-
-    void OnRegister(SkillBridge.Message.Result result, string msg)
-    {
-        MessageBox.Show(string.Format("结果：{0} msg:{1}",result,msg));
-    }
-
+    
 	
 	void Update () {
 		
@@ -49,4 +47,22 @@ public class UIRegister : MonoBehaviour {
         }
         UserService.Instance.SendRegister(this.username.text, this.password.text);
     }
+
+    void OnRegister(Result result, string message)
+    {
+        if (result == Result.Success)
+        {
+            //登录成功，进入角色选择
+            MessageBox.Show("注册成功,请登录", "提示", MessageBoxType.Information).OnYes = this.CloseRegister;
+        }
+        else
+            MessageBox.Show(message, "错误", MessageBoxType.Error);
+    }
+    
+    public void CloseRegister()
+    {
+        this.gameObject.SetActive(false);
+        uiLogin.SetActive(true);
+    }
+
 }

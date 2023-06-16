@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using Models;
 using Services;
 using SkillBridge.Message;
+using System;
+
 public class UICharacterSelect : MonoBehaviour {
 
     public GameObject panelCreate;
@@ -28,6 +30,9 @@ public class UICharacterSelect : MonoBehaviour {
         InitCharacterSelect(true);
         UserService.Instance.OnCharacterCreate = OnCharacterCreate;
     }
+    
+    
+
     public void InitCharacterCreate()
     {
         panelCreate.SetActive(true);
@@ -71,20 +76,18 @@ public class UICharacterSelect : MonoBehaviour {
     {
         panelCreate.SetActive(false);
         panelSelect.SetActive(true);
-        if(init)
+        if (init)
         {
-            foreach(var old in uiChars)
+            foreach (var old in uiChars)
             {
                 Destroy(old);
             }
             uiChars.Clear();
-            for(int i=0; i<User.Instance.Info.Player.Characters.Count;i++)
+            for (int i = 0; i < User.Instance.Info.Player.Characters.Count; i++)
             {
                 GameObject go = Instantiate(uiCharInfo, uiCharList);
                 UICharInfo chrInfo = go.GetComponent<UICharInfo>();
                 chrInfo.info = User.Instance.Info.Player.Characters[i];
-                
-
                 Button button = go.GetComponent<Button>();
                 int idx = i;
                 button.onClick.AddListener(() =>
@@ -111,6 +114,24 @@ public class UICharacterSelect : MonoBehaviour {
         {
             UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
             ci.Selected = idx == i;
+        }
+    }
+
+    public void OnGameEnter(Result result, string message)
+    {
+        if (result == Result.Success)
+        {
+            SceneManager.Instance.LoadScene("MainCity");
+        }
+        else
+            MessageBox.Show(message, "错误", MessageBoxType.Error);
+    }
+
+    public void OnClickPlay()
+    {
+        if (selectCharacterIdx >= 0)
+        {
+            UserService.Instance.SendGameEnter(selectCharacterIdx);
         }
     }
 

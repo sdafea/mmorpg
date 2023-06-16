@@ -1,209 +1,55 @@
-2023-06-12 17:48:12,729 [ 1] INFO  Unity: LoadingManager start
-2023-06-12 17:48:16,259 [ 1] INFO  Unity: DataManager > DataManager()
-2023-06-12 17:48:19,557 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
-2023-06-12 17:48:19,559 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-06-12 17:48:19,560 [ 1] INFO  Unity: DoConnect
-2023-06-12 17:48:19,563 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-06-12 17:48:19,566 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-06-16 22:30:42,549 [ 1] INFO  Unity: LoadingManager start
+2023-06-16 22:30:45,813 [ 1] INFO  Unity: DataManager > DataManager()
+2023-06-16 22:30:50,533 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
+2023-06-16 22:30:50,535 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-06-16 22:30:50,536 [ 1] INFO  Unity: DoConnect
+2023-06-16 22:30:50,539 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-06-16 22:30:50,543 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-06-12 17:48:19,571 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-06-12 17:48:19,720 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-06-12 17:48:19,722 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-06-12 17:48:20,139 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
+2023-06-16 22:30:50,549 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-06-16 22:30:56,134 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-06-16 22:30:56,137 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-06-16 22:30:56,420 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-06-12 17:48:20,155 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-06-12 17:48:20,161 [ 1] INFO  Unity: Select Char:[2]b[Archer]
-2023-06-12 17:48:21,418 [ 1] INFO  Unity: Select Char:[4]a[Archer]
-2023-06-12 17:48:22,243 [ 1] INFO  Unity: Select Char:[5]c[Wizard]
-2023-06-12 17:48:22,491 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+2023-06-16 22:30:56,437 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-06-16 22:30:56,445 [ 1] INFO  Unity: Select Char:[2]b[Archer]
+2023-06-16 22:30:57,708 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-06-16 22:30:57,743 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-06-16 22:32:19,148 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
 
-2023-06-12 17:48:22,518 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\Network\NetClient.cs:347 
 
-2023-06-12 17:48:22,548 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+2023-06-16 22:32:19,150 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:361)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:444)
 
-2023-06-12 17:48:22,567 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+2023-06-16 22:32:19,163 [ 1] INFO  Unity: DoConnect
+2023-06-16 22:32:19,164 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-06-16 22:32:19,168 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-06-12 17:48:22,594 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+2023-06-16 22:32:21,187 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:280)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:322)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:441)
 
-2023-06-12 17:48:22,613 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+2023-06-16 22:32:21,191 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
 
-2023-06-12 17:48:22,633 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:282)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:322)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:441)
 
-2023-06-12 17:48:22,654 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,668 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,695 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,720 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,735 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,753 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,776 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,801 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,816 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,834 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,869 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,886 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,902 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,921 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,937 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,952 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,968 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,982 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:22,997 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,013 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,029 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,045 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,068 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,084 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,100 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,120 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,139 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,158 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,176 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,190 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,207 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,225 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,242 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,258 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,283 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,297 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,313 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,329 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,349 [ 1] WARN  Unity: CharacterController.Move called on inactive controller
-UnityEngine.CharacterController:Move(Vector3)
-Player:Update() (at Assets/UI/Character/Stylized Astronaut/Character/Player.cs:32)
-
-2023-06-12 17:48:23,370 [ 1] INFO  Unity: Select Char:[6]d[Warrior]
-2023-06-12 17:48:23,791 [ 1] INFO  Unity: Select Char:[7]err[Warrior]
-2023-06-12 17:48:24,820 [ 1] INFO  Unity: Select Char:[2]b[Archer]
-2023-06-12 17:48:36,611 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-12 17:48:36,612 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-06-16 22:32:22,574 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-06-16 22:32:22,575 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

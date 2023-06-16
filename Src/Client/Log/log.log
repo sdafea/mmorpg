@@ -1,24 +1,25 @@
-2023-06-12 17:54:37,209 [ 1] INFO  Unity: LoadingManager start
-2023-06-12 17:54:42,626 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-12 17:54:42,626 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-12 17:54:42,627 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2023-06-16 23:08:59,038 [ 1] INFO  Unity: LoadingManager start
+2023-06-16 23:09:02,347 [ 1] INFO  Unity: DataManager > DataManager()
+2023-06-16 23:09:06,042 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
+2023-06-16 23:09:06,044 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-06-16 23:09:06,046 [ 1] INFO  Unity: DoConnect
+2023-06-16 23:09:06,049 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-06-16 23:09:06,054 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-06-12 17:54:42,628 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2023-06-16 23:09:06,060 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-06-16 23:09:11,778 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-06-16 23:09:11,781 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-06-16 23:09:12,050 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-06-12 17:54:42,630 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-12 17:54:42,630 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-12 17:54:42,631 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-2023-06-12 17:54:42,631 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-06-16 23:09:12,065 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-06-16 23:09:12,074 [ 1] INFO  Unity: Select Char:[2]b[Archer]
+2023-06-16 23:09:13,378 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-06-16 23:09:13,410 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-06-16 23:09:13,429 [ 1] INFO  Unity: OnCharacterEnter:1
+2023-06-16 23:09:13,431 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-06-16 23:09:14,306 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-06-16 23:09:21,829 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-06-16 23:09:21,831 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

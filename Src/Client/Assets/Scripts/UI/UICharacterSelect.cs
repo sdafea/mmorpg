@@ -117,16 +117,6 @@ public class UICharacterSelect : MonoBehaviour {
         }
     }
 
-    public void OnGameEnter(Result result, string message)
-    {
-        if (result == Result.Success)
-        {
-            SceneManager.Instance.LoadScene("MainCity");
-        }
-        else
-            MessageBox.Show(message, "错误", MessageBoxType.Error);
-    }
-
     public void OnClickPlay()
     {
         if (selectCharacterIdx >= 0)

@@ -1,57 +1,40 @@
-2023-06-16 22:08:04,706 [ 1] INFO  Unity: LoadingManager start
-2023-06-16 22:08:07,997 [ 1] INFO  Unity: DataManager > DataManager()
-2023-06-16 22:08:13,272 [ 1] INFO  Unity: UserLoginRequest::user :A psw:123
-2023-06-16 22:08:13,274 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-06-16 22:08:13,276 [ 1] INFO  Unity: DoConnect
-2023-06-16 22:08:13,278 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-06-16 22:08:13,282 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-07-16 06:49:08,086 [ 1] INFO  Unity: LoadingManager start
+2023-07-16 06:49:11,378 [ 1] INFO  Unity: DataManager > DataManager()
+2023-07-16 06:49:15,060 [ 1] INFO  Unity: UserLoginRequest::user :a psw:123
+2023-07-16 06:49:15,063 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-07-16 06:49:15,064 [ 1] INFO  Unity: DoConnect
+2023-07-16 06:49:15,068 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-07-16 06:49:15,071 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-06-16 22:08:13,290 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-06-16 22:08:18,908 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-06-16 22:08:18,910 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-06-16 22:08:19,221 [ 1] WARN  Unity: Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
+2023-07-16 06:49:15,077 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-07-16 06:49:15,217 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-07-16 06:49:15,220 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-07-16 06:49:15,448 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-07-16 06:49:15,459 [ 1] INFO  Unity: Select Char:[2]b[Archer]
+2023-07-16 06:49:16,370 [ 1] INFO  Unity: Select Char:[5]c[Wizard]
+2023-07-16 06:49:16,377 [ 1] INFO  Unity: SetPosition:(0, 169, 0)
+2023-07-16 06:49:16,861 [ 1] INFO  Unity: UserGameEnterRequest::characterId :2
+2023-07-16 06:49:16,893 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-07-16 06:49:16,894 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:2
+2023-07-16 06:49:16,896 [ 1] INFO  Unity: AddCharacter:5:c Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-07-16 06:49:16,898 [ 1] INFO  Unity: AddCharacter:5:c Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-07-16 06:49:16,900 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-07-16 06:49:17,463 [ 1] INFO  Unity: Charecter1 OnDestroy :ID:0 POS:(0, 0, 0) DIR:(0, 100, 0) SPD:0 
+2023-07-16 06:49:17,464 [ 1] INFO  Unity: Charecter2 OnDestroy :ID:0 POS:(0, 169, 0) DIR:(0, 100, 0) SPD:0 
+2023-07-16 06:49:17,597 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-07-16 06:49:17,610 [ 1] DEBUG Unity: Invalid AABB inAABB
+UnityEngine.Canvas:SendWillRenderCanvases()
 
-2023-06-16 22:08:19,239 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-06-16 22:08:19,247 [ 1] INFO  Unity: Select Char:[2]b[Archer]
-2023-06-16 22:08:31,717 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-06-16 22:08:31,765 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-06-16 22:10:43,833 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in D:\demo\MmoProject\mmo\Src\Client\Assets\Scripts\Network\NetClient.cs:347 
-
-2023-06-16 22:10:43,834 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:361)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:444)
-
-2023-06-16 22:10:43,849 [ 1] INFO  Unity: DoConnect
-2023-06-16 22:10:43,850 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-06-16 22:10:43,856 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-06-16 22:10:45,903 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:280)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:322)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:441)
-
-2023-06-16 22:10:45,905 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:282)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:322)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:441)
-
-2023-06-16 22:24:16,828 [ 1] ERROR Unity: Assets/Scripts/Services/UserService.cs(248,9): error CS1002: ; expected
-
-2023-06-16 22:24:17,202 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-06-16 22:24:17,203 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-07-16 06:49:22,969 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
+2023-07-16 06:49:23,241 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2023-07-16 06:49:23,363 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2023-07-16 06:49:23,452 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
+2023-07-16 06:49:23,542 [ 1] INFO  Unity: SetDirection:(60, -80, 0)
+2023-07-16 06:49:23,707 [ 1] INFO  Unity: SetDirection:(44, -90, 0)
+2023-07-16 06:49:24,481 [ 1] INFO  Unity: SetDirection:(59, -80, 0)
+2023-07-16 06:50:41,150 [ 1] INFO  Unity: Character_5_c OnDestroy :ID:0 POS:(5000, 4000, 820) DIR:(59, -80, 0) SPD:0 
+2023-07-16 06:50:41,152 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-07-16 06:50:41,153 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
